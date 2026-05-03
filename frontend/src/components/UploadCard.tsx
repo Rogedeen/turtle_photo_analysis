@@ -5,7 +5,7 @@ interface UploadCardProps {
   disabled?: boolean;
 }
 
-export const UploadCard: React.FC<UploadCardProps> = ({ onFileSelect, disabled }) => {
+const UploadCard: React.FC<UploadCardProps> = ({ onFileSelect, disabled }) => {
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     if (disabled) return;
@@ -45,3 +45,5 @@ export const UploadCard: React.FC<UploadCardProps> = ({ onFileSelect, disabled }
     </div>
   );
 };
+
+export default UploadCard;

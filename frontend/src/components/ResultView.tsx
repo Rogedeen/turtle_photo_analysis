@@ -3,9 +3,10 @@ import { AnalysisResult } from '../types';
 
 interface ResultViewProps {
   result: AnalysisResult;
+  onReset: () => void;
 }
 
-export const ResultView: React.FC<ResultViewProps> = ({ result }) => {
+const ResultView: React.FC<ResultViewProps> = ({ result, onReset }) => {
   return (
     <div className="mt-8 bg-white border border-emerald-200 rounded-xl overflow-hidden shadow-lg">
       <div className="bg-emerald-600 text-white p-4 text-center">
@@ -76,7 +77,18 @@ export const ResultView: React.FC<ResultViewProps> = ({ result }) => {
             ))}
           </div>
         </div>
+
+        <div className="px-6 pb-6 text-center">
+          <button
+            onClick={onReset}
+            className="px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition font-medium"
+          >
+            Yeni Analiz Yap
+          </button>
+        </div>
       </div>
     </div>
   );
 };
+
+export default ResultView;

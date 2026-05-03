@@ -207,3 +207,13 @@ Gelen Özellikler: {'ayak_yapisi': 'pençe'}
 ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Trachemys scripta elegans
 2026-05-03 23:20:27,443 - ### Karar Tamamlandı: Trachemys scripta elegans (Düşük)
 ### Karar Tamamlandı: Trachemys scripta elegans (Düşük)
+2026-05-04 00:24:32,929 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 00:24:32,930 - Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'kahverengi', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "evet",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "kahverengi",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T00:24:32.929037'}
+Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'kahverengi', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "evet",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "kahverengi",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T00:24:32.929037'}
+2026-05-04 00:24:32,931 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Trachemys scripta elegans
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Trachemys scripta elegans
+2026-05-04 00:24:32,932 - ### Karar Tamamlandı: Trachemys scripta elegans (Yüksek)
+### Karar Tamamlandı: Trachemys scripta elegans (Yüksek)

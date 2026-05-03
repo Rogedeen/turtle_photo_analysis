@@ -4,7 +4,7 @@ interface LoadingStepperProps {
   status: 'idle' | 'uploading' | 'processing' | 'success' | 'error';
 }
 
-export const LoadingStepper: React.FC<LoadingStepperProps> = ({ status }) => {
+const LoadingStepper: React.FC<LoadingStepperProps> = ({ status }) => {
   const steps = [
     { key: 'uploading', label: 'Fotoğraf Yükleniyor' },
     { key: 'processing', label: 'Yapay Zeka Analiz Ediyor' },
@@ -52,3 +52,5 @@ export const LoadingStepper: React.FC<LoadingStepperProps> = ({ status }) => {
     </div>
   );
 };
+
+export default LoadingStepper;

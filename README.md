@@ -1,4 +1,4 @@
-# 🐢 TurtleVision - Akıllı Kaplumbağa Tür Tespit ve Analiz Sistemi
+#  TurtleVision - Akıllı Kaplumbağa Tür Tespit ve Analiz Sistemi
 
 TurtleVision, yüklenen bir kaplumbağa fotoğrafını makine öğrenmesi (Vision AI - Gemini 1.5 Flash) ve uzman morfolojik kuralları kullanarak analiz eden, türünü saptayan modern bir **Full-Stack** web uygulamasıdır. 
 
@@ -6,7 +6,7 @@ Sistem basit bir tahmin modelinin ötesine geçerek; tıpkı bir biyolog gibi ot
 
 ---
 
-## 🚀 Proje Hakkında (Çalışma Mantığı)
+##  Proje Hakkında (Çalışma Mantığı)
 
 Proje mimarisi **SOLID** prensipleri ile birbirine bağlanan modüler bir boru hattı (pipeline) üzerine inşa edilmiştir:
 
@@ -24,7 +24,7 @@ Proje mimarisi **SOLID** prensipleri ile birbirine bağlanan modüler bir boru h
 
 ---
 
-## 🏗️ Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 **Backend (Arka Yüz)**
 - **FastAPI** (Asenkron API uç noktaları)
@@ -39,7 +39,7 @@ Proje mimarisi **SOLID** prensipleri ile birbirine bağlanan modüler bir boru h
 
 ---
 
-## 💻 Kurulum Rehberi
+##  Kurulum Rehberi
 
 Projenin tamamını ayağa kaldırmak için **Backend** ve **Frontend** süreçlerini iki ayrı sekmede başlatmanız gerekir.
 
@@ -56,9 +56,9 @@ GEMINI_API_KEY=kendi_gemini_api_anahtarinizi_buraya_yazin
 MODEL_NAME=gemini-1.5-flash
 
 # Backend ve Frontend İletişimi
-PORT=8000
+PORT=8080
 DEBUG=True
-VITE_API_BASE_URL=http://localhost:8000/api/v1
+VITE_API_BASE_URL=http://localhost:8080/api/v1
 ```
 
 ### 3. Backend (FastAPI) Sunucusunu Çalıştırma
@@ -78,10 +78,10 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 # Uvicorn ile FastAPI'yi ayağa kaldırın
-uvicorn src.api.main:app --reload
+uvicorn src.api.main:app --reload --port 8080
 ```
-*API Sunucunuz `http://localhost:8000` adresinde başlayacaktır.* 
-*(API endpoint özelliklerini `http://localhost:8000/docs` swagger sayfasından inceleyebilirsiniz.)*
+*API Sunucunuz `http://localhost:8080` adresinde başlayacaktır.* 
+*(API endpoint özelliklerini `http://localhost:8080/docs` swagger sayfasından inceleyebilirsiniz.)*
 
 ### 4. Frontend (UI) Sunucusunu Çalıştırma
 Yeni bir terminal sekmesi açın, proje ana dizininden `frontend` klasörüne girin:
@@ -99,7 +99,7 @@ npm run dev
 
 ---
 
-## 🧪 Testlerin Çalıştırılması
+##  Testlerin Çalıştırılması
 İlgili tüm parçaların (Eleme mantığı, Modüller, API istekleri) düzgün çalışıp çalışmadığını test etmek isterseniz ana dizinde (venv aktif iken) şu komutu çalıştırabilirsiniz:
 
 ```bash
@@ -107,4 +107,4 @@ pytest --cov=src --cov-report=term-missing
 ```
 
 ---
-*TurtleVision; test güvenceli yapısı, şeffaf karar alma algoritması ve modern UI bileşenleriyle yapay zekayı doğa bilimlerine taşıyan örnek bir proje çatısıdır.* 🐢✨
+*TurtleVision; test güvenceli yapısı, şeffaf karar alma algoritması ve modern UI bileşenleriyle yapay zekayı doğa bilimlerine taşıyan örnek bir proje çatısıdır.* 

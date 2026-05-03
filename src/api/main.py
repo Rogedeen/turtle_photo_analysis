@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.api.routers import router
+import uvicorn
+
+# Kalıcı port yapılandırması
+APP_HOST = "127.0.0.1"
+APP_PORT = 8080
 
 def create_app() -> FastAPI:
     """
@@ -16,7 +21,12 @@ def create_app() -> FastAPI:
     # CORS settings to allow requests from React/Vite frontend
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+        allow_origins=[
+            "http://localhost:5173",
+            "http://127.0.0.1:5173",
+            f"http://localhost:{APP_PORT}",
+            f"http://127.0.0.1:{APP_PORT}",
+        ],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
@@ -26,3 +36,11 @@ def create_app() -> FastAPI:
     return app
 
 app = create_app()
+
+if __name__ == "__main__":
+    uvicorn.run(
+        "src.api.main:app",
+        host=APP_HOST,
+        port=APP_PORT,
+        reload=True,
+    )
