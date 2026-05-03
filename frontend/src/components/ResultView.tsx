@@ -61,7 +61,7 @@ const ResultView: React.FC<ResultViewProps> = ({ result, onReset }) => {
                   </span>
                 </div>
                 <p className="text-sm text-gray-700 mb-2">{step.reason}</p>
-                {step.eliminated.length > 0 && (
+                {step.eliminated?.length > 0 && (
                   <div className="pt-2 border-t border-emerald-100">
                     <p className="text-xs font-semibold text-gray-500 mb-1">Elenenler:</p>
                     <div className="flex flex-wrap gap-2">

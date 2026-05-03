@@ -217,3 +217,15 @@ Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'düz', 'kabuk_rengi'
 ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Trachemys scripta elegans
 2026-05-04 00:24:32,932 - ### Karar Tamamlandı: Trachemys scripta elegans (Yüksek)
 ### Karar Tamamlandı: Trachemys scripta elegans (Yüksek)
+2026-05-04 01:12:33,955 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:12:33,956 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:12:33.955004'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:12:33.955004'}
+2026-05-04 01:12:33,957 - ✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+2026-05-04 01:12:33,957 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 01:12:33,958 - ### Karar Tamamlandı: Chelonia mydas (Yüksek)
+### Karar Tamamlandı: Chelonia mydas (Yüksek)
