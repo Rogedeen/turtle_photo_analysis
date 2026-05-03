@@ -7,8 +7,9 @@ class PreparedImage:
     Prepared image data in Base64 format with metadata.
     """
     base64_data: str
-    format: str
-    width: int
-    height: int
+    original_filename: str
+    original_size: tuple[int, int]
+    processed_size: tuple[int, int]
+    format: str  # "jpeg" | "png"
     file_size_bytes: int
-    original_filename: Optional[str] = None
+    prep_timestamp: str

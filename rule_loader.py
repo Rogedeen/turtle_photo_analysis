@@ -104,14 +104,16 @@ class RuleLoader:
         # Looking for the elimination section and getting all bullted items after it
         elim_section_start = "Bu türü kesin eleyecek özellikler:**"
         if elim_section_start in section:
-            elim_text = section.split(elim_section_start)[1].strip()
-            # Split by lines and take lines starting with -
-            for line in elim_text.split('\n'):
-                line = line.strip()
-                if line.startswith('-'):
-                    elim_features.append(line[1:].strip())
-                elif line and not line.startswith('*'): # Stop if next section starts
-                    break
+            parts = section.split(elim_section_start)
+            if len(parts) > 1:
+                elim_text = parts[1].strip()
+                # Split by lines and take lines starting with -
+                for line in elim_text.split('\n'):
+                    line = line.strip()
+                    if line.startswith('-'):
+                        elim_features.append(line[1:].strip())
+                    elif line and not line.startswith('*') and not line.startswith('-'): # Stop if next section starts
+                        break
 
         return SpeciesRules(
             scientific_name=sci_name,
