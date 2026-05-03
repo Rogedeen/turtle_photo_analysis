@@ -44,12 +44,15 @@ class RuleLoader:
         """
         rules_dict = {}
         
-        # Split by species sections (header with "Tür:")
-        # Looking for sections starting with **n. Tür:**
-        sections = re.split(r'\n(?=\*\*\d+\.\s*Tür:)', content)
+        # Normalize line endings
+        content = content.replace('\r\n', '\n')
+        
+        # Split by the species marker specifically
+        # Pattern: **n. Tür:** 
+        sections = re.split(r'\n(?=\*\*\d+\.\s*T[uü]r:)', content)
         
         for section in sections:
-            if "Tür:" in section:
+            if "Tür:" in section or "Tur:" in section:
                 species_data = self._parse_species_section(section)
                 if species_data:
                     rules_dict[species_data.scientific_name] = species_data
@@ -62,14 +65,9 @@ class RuleLoader:
         """
         # Extract scientific and common name
         # Format: **1. Tür:** *Scientific Name* / Common Name
-        name_pattern = r'\*\*\d+\.\s*Tür:\*\*\s*\*([^*]+)\*\s*/\s*([^\n\r]+)'
+        name_pattern = r'\*\*\d+\.\s*T[uü]r:\*\*\s*\*([^*]+)\*\s*/\s*([^\n\r]+)'
         name_match = re.search(name_pattern, section)
         
-        if not name_match:
-            # Try a slightly looser pattern
-            name_pattern = r'Tür:\*\*?\s*\*([^*]+)\*\s*/\s*([^\n\r]+)'
-            name_match = re.search(name_pattern, section)
-            
         if not name_match:
             return None
         
@@ -78,27 +76,42 @@ class RuleLoader:
 
         # Extract Distinguishing Features
         dist_features = []
-        # Support both -> and → characters
-        feature_pattern = r'-\s*\*\*([^*]+)\*\*:(.*?)[\-\→]\s*Vision AI sorusu:\s*"([^"]+)"'
-        items = re.findall(feature_pattern, section, re.DOTALL)
+        # Pattern to match bullets and questions
+        # Matches: - **Feature**: Desc -> Vision AI Question: "Text"
+        # Using a very permissive regex for characters between feature and arrow
+        feature_pattern = r'-\s*\*\*([^*]+)\*\*:(.*?)(?:-|\u2192|->)\s*Vision\s+AI\s+sorusu:\s*"([^"]+)"'
         
-        for item in items:
-            char_name, description, question = item
-            dist_features.append(MorphologicalRule(
-                characteristic=f"{char_name.strip()}: {description.strip()}",
-                vision_ai_question=question.strip()
-            ))
+        # New approach: split by lines and parse each line
+        for line in section.split('\n'):
+            line = line.strip()
+            if line.startswith('-') and 'Vision AI sorusu:' in line:
+                # Use a more flexible regex that doesn't rely on strict colon positioning after **
+                m = re.search(r'-\s*\*\*([^*]+)\*\*.*?(?:-|\u2192|->)\s*Vision\s+AI\s+sorusu:\s*"([^"]+)"', line, re.IGNORECASE)
+                if m:
+                    char_name, question = m.groups()
+                    # Description is everything between the feature name and the arrow
+                    # We re-extract it for cleaner logic
+                    desc_match = re.search(rf'\*\*{re.escape(char_name)}\*\*:(.*?)(?:-|\u2192|->)', line)
+                    description = desc_match.group(1).strip() if desc_match else ""
+                    
+                    dist_features.append(MorphologicalRule(
+                        characteristic=f"{char_name.strip()}: {description}",
+                        vision_ai_question=question.strip()
+                    ))
 
         # Extract Elimination Features
         elim_features = []
-        elim_section_pattern = r'\*\*Bu türü kesin eleyecek özellikler:\*\*(.*?)(?=\n\n|\Z)'
-        elim_section_match = re.search(elim_section_pattern, section, re.DOTALL)
-        
-        if elim_section_match:
-            elim_text = elim_section_match.group(1).strip()
-            # Find bulleted lines
-            elim_items = re.findall(r'-\s*(.*)', elim_text)
-            elim_features = [item.strip() for item in elim_items if item.strip()]
+        # Looking for the elimination section and getting all bullted items after it
+        elim_section_start = "Bu türü kesin eleyecek özellikler:**"
+        if elim_section_start in section:
+            elim_text = section.split(elim_section_start)[1].strip()
+            # Split by lines and take lines starting with -
+            for line in elim_text.split('\n'):
+                line = line.strip()
+                if line.startswith('-'):
+                    elim_features.append(line[1:].strip())
+                elif line and not line.startswith('*'): # Stop if next section starts
+                    break
 
         return SpeciesRules(
             scientific_name=sci_name,
