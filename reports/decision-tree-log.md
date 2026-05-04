@@ -229,3 +229,217 @@ Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', '
 ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
 2026-05-04 01:12:33,958 - ### Karar Tamamlandı: Chelonia mydas (Yüksek)
 ### Karar Tamamlandı: Chelonia mydas (Yüksek)
+2026-05-04 01:24:38,557 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:24:38,557 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:24:38.557280'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:24:38.557280'}
+2026-05-04 01:24:38,558 - ✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+2026-05-04 01:24:38,558 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 01:24:38,558 - ### Karar Tamamlandı: Chelonia mydas (Yüksek)
+### Karar Tamamlandı: Chelonia mydas (Yüksek)
+2026-05-04 01:30:48,257 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:30:48,257 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'belirsiz', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'belirsiz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "belirsiz",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "belirsiz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:30:48.257220'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'belirsiz', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'belirsiz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "belirsiz",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "belirsiz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:30:48.257220'}
+2026-05-04 01:30:48,257 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:30:48,258 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 01:30:48,258 - ### Karar Tamamlandı: Chelonia mydas (Yüksek)
+### Karar Tamamlandı: Chelonia mydas (Yüksek)
+2026-05-04 01:33:42,142 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:33:42,142 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'belirsiz', 'kafa_pul_sayisi': '4', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "belirsiz",\n  "kafa_pul_sayisi": "4"\n}', 'extraction_timestamp': '2026-05-04T01:33:42.142188'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'belirsiz', 'kafa_pul_sayisi': '4', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "belirsiz",\n  "kafa_pul_sayisi": "4"\n}', 'extraction_timestamp': '2026-05-04T01:33:42.142188'}
+2026-05-04 01:33:42,142 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:33:42,143 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 01:33:42,143 - ### Karar Tamamlandı: Chelonia mydas (Yüksek)
+### Karar Tamamlandı: Chelonia mydas (Yüksek)
+2026-05-04 01:34:09,908 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:34:09,908 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'siyah', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "siyah",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:34:09.908215'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'siyah', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "siyah",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:34:09.908215'}
+2026-05-04 01:34:09,908 - ✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+2026-05-04 01:34:09,908 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:34:09,909 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+2026-05-04 01:34:09,909 - ### Karar Tamamlandı: Testudo graeca (Yüksek)
+### Karar Tamamlandı: Testudo graeca (Yüksek)
+2026-05-04 01:35:27,980 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:35:27,980 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:35:27.980550'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:35:27.980550'}
+2026-05-04 01:35:27,981 - ✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+2026-05-04 01:35:27,982 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:35:27,982 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+2026-05-04 01:35:27,983 - ### Karar Tamamlandı: Testudo graeca (Yüksek)
+### Karar Tamamlandı: Testudo graeca (Yüksek)
+2026-05-04 01:37:28,162 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:37:28,163 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "kanca",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:37:28.162712'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "kanca",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:37:28.162712'}
+2026-05-04 01:37:28,163 - ✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+2026-05-04 01:37:28,163 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:37:28,163 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+2026-05-04 01:37:28,164 - ### Karar Tamamlandı: Testudo graeca (Yüksek)
+### Karar Tamamlandı: Testudo graeca (Yüksek)
+2026-05-04 01:37:47,334 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:37:47,334 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "kanca",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:37:47.334176'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "kanca",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:37:47.334176'}
+2026-05-04 01:37:47,335 - ✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+2026-05-04 01:37:47,335 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:37:47,336 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+2026-05-04 01:37:47,336 - ### Karar Tamamlandı: Testudo graeca (Yüksek)
+### Karar Tamamlandı: Testudo graeca (Yüksek)
+2026-05-04 01:38:29,052 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:38:29,053 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'belirsiz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "belirsiz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:38:29.052778'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'belirsiz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "belirsiz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:38:29.052778'}
+2026-05-04 01:38:29,053 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:38:29,053 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 01:38:29,054 - ### Karar Tamamlandı: Chelonia mydas (Yüksek)
+### Karar Tamamlandı: Chelonia mydas (Yüksek)
+2026-05-04 01:38:57,223 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:38:57,223 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:38:57.222969'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T01:38:57.222969'}
+2026-05-04 01:38:57,223 - ✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+2026-05-04 01:38:57,224 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 01:38:57,224 - ### Karar Tamamlandı: Chelonia mydas (Yüksek)
+### Karar Tamamlandı: Chelonia mydas (Yüksek)
+2026-05-04 01:39:18,732 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:39:18,733 - Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "evet",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:39:18.732501'}
+Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "yanak_seridi": "evet",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:39:18.732501'}
+2026-05-04 01:39:18,733 - ✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+2026-05-04 01:39:18,734 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 01:39:18,734 - ### Karar Tamamlandı: Chelonia mydas (Yüksek)
+### Karar Tamamlandı: Chelonia mydas (Yüksek)
+2026-05-04 01:48:46,602 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:48:46,603 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'siyah', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'belirsiz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "analiz_notlari": "Bu kaplumbağa yavrusu, ön ayaklarında belirgin pençelere sahip olup, deniz kaplumbağalarında görülen yüzgeç yapısını göstermemektedir. Kabuğu ağırlıklı olarak siyah renkte ve üzerinde çok sayıda küçük, açık renkli benekler bulunmaktadır. Uzun ve sivri kuyruk yapısı dikkat çekicidir. Kafasındaki pullar küçük ve granüler yapıda olup, deniz kaplumbağalarında kritik olan belirgin büyük prefrontal pul gruplarını ayırt etmek mümkün değildir.",\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "siyah",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "belirsiz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:48:46.602730'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'siyah', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'belirsiz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "analiz_notlari": "Bu kaplumbağa yavrusu, ön ayaklarında belirgin pençelere sahip olup, deniz kaplumbağalarında görülen yüzgeç yapısını göstermemektedir. Kabuğu ağırlıklı olarak siyah renkte ve üzerinde çok sayıda küçük, açık renkli benekler bulunmaktadır. Uzun ve sivri kuyruk yapısı dikkat çekicidir. Kafasındaki pullar küçük ve granüler yapıda olup, deniz kaplumbağalarında kritik olan belirgin büyük prefrontal pul gruplarını ayırt etmek mümkün değildir.",\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "siyah",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "belirsiz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:48:46.602730'}
+2026-05-04 01:48:46,603 - ✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+2026-05-04 01:48:46,604 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:48:46,604 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+2026-05-04 01:48:46,604 - ### Karar Tamamlandı: Testudo graeca (Yüksek)
+### Karar Tamamlandı: Testudo graeca (Yüksek)
+2026-05-04 01:49:22,435 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:49:22,435 - Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "analiz_notlari": "Fotoğraftaki kaplumbağanın belirgin kırmızı-turuncu yanak şeridi, boynundaki sarı çizgiler ve kabuğundaki benzer renkteki desenler, bir tatlı su kaplumbağası olduğunu düşündürmektedir. Gaga yapısı hafif kıvrık olup, ön ayak yapısı ve kafa pulları net görülemediğinden belirsizdir. Kabuk kenarları gözlemlenen kısımda düz görünmektedir.",\n  "yanak_seridi": "evet",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:49:22.435056'}
+Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'evet', 'ayak_yapisi': 'belirsiz', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "analiz_notlari": "Fotoğraftaki kaplumbağanın belirgin kırmızı-turuncu yanak şeridi, boynundaki sarı çizgiler ve kabuğundaki benzer renkteki desenler, bir tatlı su kaplumbağası olduğunu düşündürmektedir. Gaga yapısı hafif kıvrık olup, ön ayak yapısı ve kafa pulları net görülemediğinden belirsizdir. Kabuk kenarları gözlemlenen kısımda düz görünmektedir.",\n  "yanak_seridi": "evet",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "belirsiz",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:49:22.435056'}
+2026-05-04 01:49:22,435 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Trachemys scripta elegans
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Trachemys scripta elegans
+2026-05-04 01:49:22,435 - ### Karar Tamamlandı: Trachemys scripta elegans (Yüksek)
+### Karar Tamamlandı: Trachemys scripta elegans (Yüksek)
+2026-05-04 01:49:44,551 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 01:49:44,551 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "analiz_notlari": "Gözlemlenen kaplumbağa, güçlü pençelere sahip karasal ayak yapısı ile bir kara veya tatlı su kaplumbağası olduğunu düşündürmektedir. Kabuğu yüksek kemerli olup, koyu kahverengi/siyah zemin üzerinde belirgin sarı/turuncu radyasyonlu desenlere sahiptir. Kafa üzerindeki pullar küçük ve granüler olduğundan, deniz kaplumbağalarına özgü büyük prefrontal pul gruplarını saymak mümkün değildir.",\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:49:44.551075'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "analiz_notlari": "Gözlemlenen kaplumbağa, güçlü pençelere sahip karasal ayak yapısı ile bir kara veya tatlı su kaplumbağası olduğunu düşündürmektedir. Kabuğu yüksek kemerli olup, koyu kahverengi/siyah zemin üzerinde belirgin sarı/turuncu radyasyonlu desenlere sahiptir. Kafa üzerindeki pullar küçük ve granüler olduğundan, deniz kaplumbağalarına özgü büyük prefrontal pul gruplarını saymak mümkün değildir.",\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T01:49:44.551075'}
+2026-05-04 01:49:44,551 - ✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+✅ ayak_yapisi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Pençe ayak yapısı deniz kaplumbağalarında bulunmaz.)
+2026-05-04 01:49:44,551 - ✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+✅ yanak_seridi tespit edildi -> Trachemys scripta elegans elendi (Kızıl yanaklı kaplumbağalarda yanak şeridi bulunmalıdır.)
+2026-05-04 01:49:44,552 - ⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+⚖️ Birden fazla aday arasında puanlama yapıldı. Tahmin: Testudo graeca
+2026-05-04 01:49:44,552 - ### Karar Tamamlandı: Testudo graeca (Yüksek)
+### Karar Tamamlandı: Testudo graeca (Yüksek)
+2026-05-04 02:59:46,301 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 02:59:46,302 - Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": ["Trachemys scripta elegans", "Trachemys scripta scripta", "Trachemys scripta troostii"],\n  "yanak_seridi": "evet",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T02:59:46.301445'}
+Gelen Özellikler: {'yanak_seridi': 'evet', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": ["Trachemys scripta elegans", "Trachemys scripta scripta", "Trachemys scripta troostii"],\n  "yanak_seridi": "evet",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T02:59:46.301445'}
+2026-05-04 02:59:46,302 - Gemini'ın Ön Elediği ve Karar Ağacına Giren Adaylar: ['Chelonia mydas', 'Caretta caretta', 'Eretmochelys imbricata', 'Dermochelys coriacea', 'Trachemys scripta elegans', 'Testudo graeca', 'Testudo hermanni', 'Mauremys rivulata']
+Gemini'ın Ön Elediği ve Karar Ağacına Giren Adaylar: ['Chelonia mydas', 'Caretta caretta', 'Eretmochelys imbricata', 'Dermochelys coriacea', 'Trachemys scripta elegans', 'Testudo graeca', 'Testudo hermanni', 'Mauremys rivulata']
+2026-05-04 02:59:46,303 - ✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+✅ ayak_yapisi tespit edildi -> Trachemys scripta elegans, Testudo graeca, Testudo hermanni, Mauremys rivulata elendi (Perde ayak yapısı sadece deniz kaplumbağalarında bulunur.)
+2026-05-04 02:59:46,303 - ✅ yanak_seridi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Kırmızı/turuncu yanak şeridi ağırlıklı olarak Kızıl Yanaklı kaplumbağalarda bulunur.)
+✅ yanak_seridi tespit edildi -> Chelonia mydas, Caretta caretta, Eretmochelys imbricata, Dermochelys coriacea elendi (Kırmızı/turuncu yanak şeridi ağırlıklı olarak Kızıl Yanaklı kaplumbağalarda bulunur.)
+2026-05-04 02:59:46,304 - ❌ Tüm adaylar elendi!
+❌ Tüm adaylar elendi!
+2026-05-04 02:59:46,304 - ### Karar Tamamlandı: None (Düşük)
+### Karar Tamamlandı: None (Düşük)
+2026-05-04 03:04:12,287 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:04:12,287 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": [\n    "Macrochelys temminckii",\n    "Macrochelys suwanniensis",\n    "Macrochelys apalachicolae"\n  ],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "kanca",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:04:12.287439'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": [\n    "Macrochelys temminckii",\n    "Macrochelys suwanniensis",\n    "Macrochelys apalachicolae"\n  ],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "kanca",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:04:12.287439'}
+2026-05-04 03:04:12,288 - ⚖️ Puanlama yapıldı. Tahmin: Eretmochelys imbricata
+⚖️ Puanlama yapıldı. Tahmin: Eretmochelys imbricata
+2026-05-04 03:05:36,227 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:05:36,228 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": [\n    "Terrapene carolina",\n    "Terrapene carolina carolina",\n    "Terrapene ornata"\n  ],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:05:36.227057'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'evet', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": [\n    "Terrapene carolina",\n    "Terrapene carolina carolina",\n    "Terrapene ornata"\n  ],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:05:36.227057'}
+2026-05-04 03:05:36,228 - ⚖️ Puanlama yapıldı. Tahmin: Testudo graeca
+⚖️ Puanlama yapıldı. Tahmin: Testudo graeca
+2026-05-04 03:10:50,079 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:10:50,080 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": [\n    "Macrochelys suwanniensis",\n    "Macrochelys apalachicolae",\n    "Macrochelys temminckii"\n  ],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "kanca",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:10:50.079818'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'girintili', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": [\n    "Macrochelys suwanniensis",\n    "Macrochelys apalachicolae",\n    "Macrochelys temminckii"\n  ],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "kanca",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "girintili",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:10:50.079818'}
+2026-05-04 03:10:50,080 - ⚖️ Puanlama yapıldı. Tahmin: Eretmochelys imbricata
+⚖️ Puanlama yapıldı. Tahmin: Eretmochelys imbricata
+2026-05-04 03:12:35,537 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:12:35,537 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": ["Chelonia mydas", "Natator depressus", "Caretta caretta"],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T03:12:35.537138'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": ["Chelonia mydas", "Natator depressus", "Caretta caretta"],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T03:12:35.537138'}
+2026-05-04 03:12:35,538 - ⚖️ Puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Puanlama yapıldı. Tahmin: Chelonia mydas

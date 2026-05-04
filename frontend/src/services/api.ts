@@ -16,5 +16,21 @@ export const analyzeImageApi = async (file: File): Promise<AnalysisResult> => {
     throw new Error(errorData.detail || 'Görüntü analizi sırasında bir hata oluştu');
   }
 
-  return response.json();
+  // Backend'den gelen ham veriyi alıyoruz
+  const rawData = await response.json();
+
+  // DTO (Data Transfer Object) Mapping:
+  // Gelen veriyi Frontend'in AnalysisResult tipine uyarlıyoruz.
+  const mappedResult: AnalysisResult = {
+    species: rawData.predicted_species || "Tür Belirlenemedi",
+    confidence_score: rawData.confidence || 0,
+    elimination_steps: rawData.elimination_steps?.map((step: any) => ({
+      feature: step.feature_checked,
+      value: step.feature_value, // Artık "evet/hayır" kontrolü yok, doğrudan gelen veriyi alıyoruz
+      reason: step.reason,
+      eliminated: step.eliminated_species || []
+    })) || []
+  };
+
+  return mappedResult;
 };

@@ -1,0 +1,10 @@
+{
+  "Chelonia mydas": {"ayak_yapisi": "perde", "kafa_pul_sayisi": "2", "gaga_yapisi": "düz", "kabuk_kenari": "düz"},
+  "Caretta caretta": {"ayak_yapisi": "perde", "kafa_pul_sayisi": "4"},
+  "Eretmochelys imbricata": {"ayak_yapisi": "perde", "gaga_yapisi": "kanca", "kabuk_kenari": "girintili"},
+  "Dermochelys coriacea": {"ayak_yapisi": "perde", "kabuk_rengi": "siyah"},
+  "Trachemys scripta elegans": {"ayak_yapisi": "pençe", "yanak_seridi": "evet", "boyun_deseni": "evet"},
+  "Testudo graeca": {"ayak_yapisi": "pençe", "kabuk_sari_benek": "hayır", "yanak_seridi": "hayır"},
+  "Testudo hermanni": {"ayak_yapisi": "pençe", "kabuk_sari_benek": "evet", "yanak_seridi": "hayır"},
+  "Mauremys rivulata": {"ayak_yapisi": "pençe", "boyun_deseni": "evet", "kabuk_rengi": "siyah", "yanak_seridi": "hayır"}
+}

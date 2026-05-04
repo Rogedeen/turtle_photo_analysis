@@ -8,7 +8,7 @@ export interface AnalysisResult {
 
 export interface EliminationStep {
   feature: string;
-  found: boolean;
+  value: string
   eliminated: string[];
   reason: string;
 }
