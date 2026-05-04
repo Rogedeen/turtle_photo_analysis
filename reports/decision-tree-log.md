@@ -443,3 +443,19 @@ Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'kanca', 'kabuk_ren
 Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'hayır', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'perde', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': '2', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": ["Chelonia mydas", "Natator depressus", "Caretta caretta"],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "hayır",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "perde",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "2"\n}', 'extraction_timestamp': '2026-05-04T03:12:35.537138'}
 2026-05-04 03:12:35,538 - ⚖️ Puanlama yapıldı. Tahmin: Chelonia mydas
 ⚖️ Puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 03:16:36,574 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:16:36,574 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": [\n    "Glyptemys muhlenbergii",\n    "Clemmys guttata",\n    "Terrapene carolina"\n  ],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:16:36.573911'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'hayır', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": [\n    "Glyptemys muhlenbergii",\n    "Clemmys guttata",\n    "Terrapene carolina"\n  ],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "düz",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "hayır",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:16:36.573911'}
+2026-05-04 03:16:36,575 - ⚖️ Puanlama yapıldı. Tahmin: Testudo hermanni
+⚖️ Puanlama yapıldı. Tahmin: Testudo hermanni
+2026-05-04 03:17:29,176 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:17:29,177 - Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'evet', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": ["Terrapene carolina", "Terrapene ornata", "Cuora flavomarginata"],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:17:29.176239'}
+Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'evet', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": ["Terrapene carolina", "Terrapene ornata", "Cuora flavomarginata"],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:17:29.176239'}
+2026-05-04 03:17:29,178 - ⚖️ Puanlama yapıldı. Tahmin: Testudo hermanni
+⚖️ Puanlama yapıldı. Tahmin: Testudo hermanni

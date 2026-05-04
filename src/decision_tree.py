@@ -43,14 +43,28 @@ class TurtleDecisionTree(IDecisionEngine):
 
     def decide(self, features: Dict[str, Any]) -> DecisionResult:
         self._log_event("\n### Karar Süreci Başladı")
-        self._log_event(f"Gelen Özellikler: {features}")
         
         gemini_candidates = features.get("olasi_adaylar", [])
         
         if gemini_candidates and isinstance(gemini_candidates, list):
+            # Gemini'ın önerdiği türleri bizim veritabanımızla kıyasla
             candidates = [c for c in gemini_candidates if c in self.ideal_traits]
+            
+            # 🚀 İŞTE YENİ SİHİRLİ DOKUNUŞ: 
+            # Eğer eşleşme YOKSA (yani Gemini veritabanımızda olmayan yepyeni bir tür bulduysa)
             if not candidates: 
-                candidates = list(self.ideal_traits.keys())
+                best_guess = gemini_candidates[0] # Gemini'ın 1 numaralı tercihini al
+                self._log_event(f"⚠️ Veritabanı Dışı Tür Tespit Edildi! Gemini'a güveniliyor: {best_guess}")
+                
+                return DecisionResult(
+                    predicted_species=best_guess,
+                    common_name_tr="Veritabanı Dışı / Küresel Tür",
+                    confidence=0.85, # Gemini'a güvendiğimiz için banko yüksek skor veriyoruz
+                    confidence_level="Yüksek",
+                    elimination_steps=[],
+                    remaining_candidates=gemini_candidates,
+                    features_used=features
+                )
         else:
             candidates = list(self.ideal_traits.keys())
 
