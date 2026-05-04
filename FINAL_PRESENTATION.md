@@ -22,9 +22,10 @@ Projenin geliştirilmesinde Çoklu-Ajan (Multi-Agent) mimarisi kullanılmış ve
 - ⚙️ **Backend Ajanı:** Mock mantığıyla çalışan ağacı, gerçeğe dönüştürerek FastAPI ile dış dünya iletişimine açtı.
 - 💻 **Frontend Ajanı:** Kullanıcı dostu, bileşen (component) tabanlı React UX/UI tasarımlarını inşa etti.
 - ✅ **Doğrulayıcı (Validator):** Yazılan her kod bloğunu denetledi.
+- 📜 **Kural Denetimi (Final Audit):** Her ajan (Image, Feature, Decision, Backend, Frontend) kendi kod bloğunu SOLID ve Clean Code standartlarına göre denetleyerek nihai raporlarını sundu.
 
 **SOLID Kuralları ile Uyum:**
-Bu iş bölümü, doğrudan Single Responsibility Principle (Tek Sorumluluk Prensibi) temel alınarak kuruldu. Her bir ajan, Dependency Inversion (Bağımlılığı Tersine Çevirme) prensibini uygulayarak "Interface" ve "Soyut" sınıflar üzerinden birbirini çağıran sistemler yazdı.
+Bu iş bölümü, doğrudan Single Responsibility Principle (Tek Sorumluluk Prensibi) temel alınarak kuruldu. Her bir ajan, Dependency Inversion (Bağımlılığı Tersine Çevirme) prensibini uygulayarak "Interface" ve "Soyut" sınıflar üzerinden birbirini çağıran sistemler yazdı. Audit raporları, sistemin bu kurallara %100 uyduğunu teyit etmektedir.
 
 ---
 

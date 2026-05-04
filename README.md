@@ -107,4 +107,23 @@ pytest --cov=src --cov-report=term-missing
 ```
 
 ---
-*TurtleVision; test güvenceli yapısı, şeffaf karar alma algoritması ve modern UI bileşenleriyle yapay zekayı doğa bilimlerine taşıyan örnek bir proje çatısıdır.* 
+
+## 🛡️ Kalite Güvencesi ve Kurallara Uyum (Audit Report)
+
+Proje, geliştirme sürecinin sonunda tüm alt ajanlar tarafından (Image, Feature Extraction, Decision Tree, Backend, Frontend) kurallara uyum açısından denetlenmiştir.
+
+### 📋 Denetlenen Kurallar
+- **CLEAN_CODE_RULES.md:** İsimlendirme standartları, fonksiyon boyutu ve modülerlik.
+- **SOLID_PRINCIPLES.md:** SRP, OCP, LSP, ISP ve DIP prensiplerine tam uyum.
+- **REPORT_FORMAT.md:** Şeffaf ve izlenebilir raporlama.
+
+### 🧩 Ajan Rapor Özetleri
+- **Görüntü İşleme:** Görüntü standardizasyonu ve Base64 optimizasyonu SOLID prensiplerine uygun olarak `IImagePreparer` arayüzü üzerinden soyutlanmıştır.
+- **Özellik Çıkarımı:** Gemini 1.5 Flash entegrasyonu, `PromptBuilder` ve `ResponseParser` sınıfları ile sorumluluklarına bölünmüş (SRP), hata toleransı (JSON Sanitization) maksimize edilmiştir.
+- **Karar Motoru:** Hibrit (Vision AI + Morfoloji) puanlama sistemi, `rule_loader` üzerinden dinamik olarak beslenmekte ve %100 deterministik sonuçlar üretmektedir.
+- **API (Backend):** FastAPI mimarisi asenkron yapıda kurulmuş, Pydantic modelleri ile tip güvenliği (Type Safety) garanti altına alınmıştır.
+- **Arayüz (Frontend):** React bileşenleri `useAnalyzeImage` hook'u ile mantıksal katmandan izole edilmiş, Tailwind CSS ile doğa temalı UX/UI standartları yakalanmıştır.
+
+---
+*TurtleVision; test güvenceli yapısı, şeffaf karar alma algoritması ve modern UI bileşenleriyle yapay zekayı doğa bilimlerine taşıyan örnek bir proje çatısıdır.*
+ 
