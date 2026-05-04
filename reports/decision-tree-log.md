@@ -459,3 +459,666 @@ Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'düz', 'kabuk_reng
 Gelen Özellikler: {'yanak_seridi': 'hayır', 'gaga_yapisi': 'hafif_kıvrık', 'kabuk_rengi': 'karışık', 'kabuk_sari_benek': 'evet', 'boyun_deseni': 'evet', 'ayak_yapisi': 'pençe', 'kabuk_kenari': 'düz', 'kafa_pul_sayisi': 'belirsiz', 'api_model': 'gemini-2.5-flash', 'raw_response': '{\n  "olasi_adaylar": ["Terrapene carolina", "Terrapene ornata", "Cuora flavomarginata"],\n  "yanak_seridi": "hayır",\n  "gaga_yapisi": "hafif_kıvrık",\n  "kabuk_rengi": "karışık",\n  "kabuk_sari_benek": "evet",\n  "boyun_deseni": "evet",\n  "ayak_yapisi": "pençe",\n  "kabuk_kenari": "düz",\n  "kafa_pul_sayisi": "belirsiz"\n}', 'extraction_timestamp': '2026-05-04T03:17:29.176239'}
 2026-05-04 03:17:29,178 - ⚖️ Puanlama yapıldı. Tahmin: Testudo hermanni
 ⚖️ Puanlama yapıldı. Tahmin: Testudo hermanni
+2026-05-04 03:27:02,790 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:27:02,791 - ⚖️ Puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 03:28:09,828 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:28:09,829 - ⚖️ Puanlama yapıldı. Tahmin: Testudo hermanni
+⚖️ Puanlama yapıldı. Tahmin: Testudo hermanni
+2026-05-04 03:30:01,573 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 03:30:01,573 - ⚖️ Puanlama yapıldı. Tahmin: Chelonia mydas
+⚖️ Puanlama yapıldı. Tahmin: Chelonia mydas
+2026-05-04 10:55:03,146 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 10:55:03,147 - ⚖️ Puanlama yapıldı. Tahmin: Stigmochelys pardalis
+⚖️ Puanlama yapıldı. Tahmin: Stigmochelys pardalis
+
+## [2026-05-04 14:35] Karar Mantığı İyileştirmesi (Hibrit Yaklaşım)
+**Yapılan Değişiklikler:**
+- **Gemini Önceliği:** src/decision_tree.py içindeki decide metodu, Gemini'dan gelen olasi_turler listesindeki güven skorlarını kontrol edecek şekilde güncellendi.
+- **Yüksek Güven Eşiği:** Eğer Gemini bir tür için %85 veya daha fazla güven duyuyorsa, bu tür veritabanında (15 tür) olmasa bile doğrudan sonuç olarak döndürülüyor.
+- **Fallback Mekanizması:** Veritabanı ile yapılan morfolojik eşleşme skoru çok düşükse (< 0.4), sistem otomatik olarak Gemini'ın en olası gördüğü türe güveniyor.
+- **Dinamik İsimlendirme:** Veritabanı dışı türler için "Veritabanı Dışı / Küresel Tür" etiketi eklendi.
+
+**Sonuç:** Sistem artık hem kural tabanlı (yerel türler için kesinlik) hem de model tabanlı (küresel türler için esneklik) hibrit bir yapıda çalışıyor.
+2026-05-04 11:08:34,485 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:08:34,485 - 🌟 Gemini Yüksek Güven (%98.0): Terrapene carolina
+🌟 Gemini Yüksek Güven (%98.0): Terrapene carolina
+2026-05-04 11:11:38,719 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:38,719 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:11:38,721 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:38,721 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:11:38,722 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:38,723 - ⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 1.0)
+2026-05-04 11:11:38,724 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:38,724 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:11:38,725 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:38,725 - ⚖️ Puanlama tamamlandı. Tahmin: Graptemys geographica (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Graptemys geographica (Puan: 3.0)
+2026-05-04 11:11:46,765 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:46,766 - ⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+2026-05-04 11:11:46,769 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:46,770 - ⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+2026-05-04 11:11:46,772 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:46,773 - ⚖️ Puanlama tamamlandı. Tahmin: Mauremys rivulata (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Mauremys rivulata (Puan: 1.0)
+2026-05-04 11:11:46,776 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:46,777 - ⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+2026-05-04 11:11:46,779 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:11:46,780 - ⚖️ Puanlama tamamlandı. Tahmin: Terrapene carolina (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Terrapene carolina (Puan: 3.0)
+2026-05-04 11:12:03,151 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:03,152 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:03,154 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:03,154 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:03,156 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:03,156 - ⚖️ Puanlama tamamlandı. Tahmin: Mauremys rivulata (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Mauremys rivulata (Puan: 1.0)
+2026-05-04 11:12:03,157 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:03,157 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:03,168 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:03,169 - ⚖️ Puanlama tamamlandı. Tahmin: Chelydra serpentina (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelydra serpentina (Puan: 3.0)
+2026-05-04 11:12:10,196 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:10,197 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:10,199 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:10,199 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:10,201 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:10,201 - ⚖️ Puanlama tamamlandı. Tahmin: Testudo graeca (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Testudo graeca (Puan: 1.0)
+2026-05-04 11:12:10,202 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:10,203 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:10,205 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:10,205 - ⚖️ Puanlama tamamlandı. Tahmin: Macrochelys temminckii (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Macrochelys temminckii (Puan: 3.0)
+2026-05-04 11:12:21,391 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:21,391 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+2026-05-04 11:12:21,393 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:21,393 - ⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+2026-05-04 11:12:21,394 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:21,395 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:21,395 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:21,396 - ⚖️ Puanlama tamamlandı. Tahmin: Chrysemys picta (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chrysemys picta (Puan: 3.0)
+2026-05-04 11:12:21,397 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:21,397 - ⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 1.0)
+2026-05-04 11:12:21,398 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:21,399 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:12:21,400 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:21,400 - ⚖️ Puanlama tamamlandı. Tahmin: Chrysemys picta (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chrysemys picta (Puan: 3.0)
+2026-05-04 11:12:28,294 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,294 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+2026-05-04 11:12:28,298 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,299 - ⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+2026-05-04 11:12:28,299 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,300 - ⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 3.0)
+2026-05-04 11:12:28,300 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,301 - ⚖️ Puanlama tamamlandı. Tahmin: Geochelone elegans (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Geochelone elegans (Puan: 3.0)
+2026-05-04 11:12:28,301 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,302 - ⚖️ Puanlama tamamlandı. Tahmin: Geochelone elegans (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Geochelone elegans (Puan: 3.0)
+2026-05-04 11:12:28,302 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,303 - ⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 3.0)
+2026-05-04 11:12:28,305 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,306 - ⚖️ Puanlama tamamlandı. Tahmin: Mauremys rivulata (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Mauremys rivulata (Puan: 1.0)
+2026-05-04 11:12:28,308 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,308 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:12:28,311 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:28,311 - ⚖️ Puanlama tamamlandı. Tahmin: Geochelone elegans (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Geochelone elegans (Puan: 3.0)
+2026-05-04 11:12:34,126 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,126 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+2026-05-04 11:12:34,128 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,128 - ⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+2026-05-04 11:12:34,129 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,129 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:34,129 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,129 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonoidis carbonarius (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonoidis carbonarius (Puan: 3.0)
+2026-05-04 11:12:34,130 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,130 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonoidis carbonarius (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonoidis carbonarius (Puan: 3.0)
+2026-05-04 11:12:34,130 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,130 - ⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Eretmochelys imbricata (Puan: 3.0)
+2026-05-04 11:12:34,132 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,133 - ⚖️ Puanlama tamamlandı. Tahmin: Mauremys rivulata (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Mauremys rivulata (Puan: 1.0)
+2026-05-04 11:12:34,134 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,134 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:12:34,135 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:34,136 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonoidis carbonarius (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonoidis carbonarius (Puan: 3.0)
+2026-05-04 11:12:41,744 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,745 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+2026-05-04 11:12:41,747 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,747 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:41,747 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,748 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:41,748 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,748 - ⚖️ Puanlama tamamlandı. Tahmin: Centrochelys sulcata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Centrochelys sulcata (Puan: 3.0)
+2026-05-04 11:12:41,749 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,749 - ⚖️ Puanlama tamamlandı. Tahmin: Centrochelys sulcata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Centrochelys sulcata (Puan: 3.0)
+2026-05-04 11:12:41,750 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,750 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 3.0)
+2026-05-04 11:12:41,752 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,752 - ⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 1.0)
+2026-05-04 11:12:41,753 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,754 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:12:41,755 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:41,756 - ⚖️ Puanlama tamamlandı. Tahmin: Centrochelys sulcata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Centrochelys sulcata (Puan: 3.0)
+2026-05-04 11:12:48,236 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,237 - ⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+⚖️ Puanlama tamamlandı. Tahmin: Chelonia mydas (Puan: 4.0)
+2026-05-04 11:12:48,240 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,240 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:12:48,241 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,241 - ⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 3.0)
+2026-05-04 11:12:48,242 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,242 - ⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 3.0)
+2026-05-04 11:12:48,243 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,243 - ⚖️ Puanlama tamamlandı. Tahmin: Centrochelys sulcata (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Centrochelys sulcata (Puan: 3.0)
+2026-05-04 11:12:48,244 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,244 - ⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 3.0)
+2026-05-04 11:12:48,245 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,246 - ⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 1.0)
+⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 1.0)
+2026-05-04 11:12:48,247 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,247 - ⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Dermochelys coriacea (Puan: 3.0)
+2026-05-04 11:12:48,248 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:12:48,249 - ⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 3.0)
+⚖️ Puanlama tamamlandı. Tahmin: Testudo hermanni (Puan: 3.0)
+2026-05-04 11:16:41,869 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:16:41,869 - 🌟 Gemini Yüksek Güven (%95.0): Caretta caretta
+🌟 Gemini Yüksek Güven (%95.0): Caretta caretta
+2026-05-04 11:16:41,870 - ⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 6.5)
+⚖️ Puanlama tamamlandı. Tahmin: Caretta caretta (Puan: 6.5)
+
+## [2026-05-04 15:30] Self-Elimination Hatası Giderildi
+**Sorun:** Gemini'ın %85+ güvenle bildiği türler, küçük morfolojik uyuşmazlıklar nedeniyle eleniyor ve sistem "Bilinmeyen" döndürüyordu.
+**Çözüm:** src/decision_tree.py güncellendi. Eğer tüm adaylar elenirse ve Gemini güveni yüksekse, en yüksek skorlu aday "Görsel Güven" notuyla sürece geri dahil ediliyor.
+**Sonuç:** Sistem artık daha esnek ve kullanıcı dostu. Morfoloji çelişse bile görsel kanıt güçlüyse sonuç gösteriliyor.
+2026-05-04 11:23:47,079 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:23:47,080 - 🌟 Gemini Yüksek Güven (%98.0): Caretta caretta
+🌟 Gemini Yüksek Güven (%98.0): Caretta caretta
+2026-05-04 11:23:47,080 - ### Karar Tamamlandı: Caretta caretta (yüksek)
+### Karar Tamamlandı: Caretta caretta (yüksek)
+## [2026-05-04 14:30] Karar Ağacı Güvenilirlik Güncellemesi
+
+**HATA ANALİZİ VE DÜZELTME:**
+- **Problem:** Caretta caretta vakalarında prefrontal pul sayısının '4' veya '2 çift' olarak tespit edilmesine rağmen, sistemin sadece tek bir değere odaklanıp türü elemesi.
+- **Düzeltme:** src/decision_tree.py içinde morfolojik tolerans mantığı eklendi. Artık '4', '2 çift', 'dört' gibi ifadeler Caretta caretta için geçerli kabul ediliyor.
+
+**SOLID VE CLEAN CODE DENETİMİ:**
+- src/decision_tree.py dosyası TurtleVision standartlarına göre optimize edildi.
+- Sert eleme (Strict Elimination) yerine Puanlama (Scoring) ağırlıklı sisteme geçildi.
+- "Geri Çağırma" (Recall) mekanizması ile Gemini güveni %90+ olan türlerin tek bir morfolojik uyuşmazlıkla elenmesi engellendi.
+
+**VERİTABANI GÜNCELLEMELERİ:**
+- src/turtles_db.json içinde common_name_tr alanları eksik olan türler için standardizasyon yapıldı.
+- kafa_pul_sayisi verileri prefrontal pul tanımlarıyla uyumlu hale getirildi.
+
+**SONUÇ:**
+- Caretta caretta için Gemini %98 güven verdiğinde, tek bir özellik uyuşmazlığı olsa bile sonuç artık "Bilinmeyen" dönmeyecek. Adaylar listesinde korunacak.
+2026-05-04 11:31:45,698 - 
+### Karar Süreci Başladı
+
+### Karar Süreci Başladı
+2026-05-04 11:31:45,698 - 🌟 Gemini Yüksek Güven (%98.0): Terrapene carolina carolina
+🌟 Gemini Yüksek Güven (%98.0): Terrapene carolina carolina
+2026-05-04 11:37:13,280 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:37:13,282 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:37:13,282 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:37:13,282 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:37:13,283 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:37:13,283 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:37:13,284 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:37:13,285 - Seçilen aday: Trachemys scripta elegans, Güven: %68.6
+Seçilen aday: Trachemys scripta elegans, Güven: %68.6
+2026-05-04 11:37:13,287 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:37:13,287 - Seçilen aday: Chelonia mydas, Güven: %90.0
+Seçilen aday: Chelonia mydas, Güven: %90.0
+2026-05-04 11:39:28,274 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:39:28,275 - Seçilen aday: Trachemys scripta elegans, Güven: %68.6
+Seçilen aday: Trachemys scripta elegans, Güven: %68.6
+2026-05-04 11:39:28,276 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:39:28,276 - Seçilen aday: Chelonia mydas, Güven: %90.0
+Seçilen aday: Chelonia mydas, Güven: %90.0
+2026-05-04 11:39:30,375 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:39:30,375 - Seçilen aday: Trachemys scripta elegans, Güven: %68.6
+Seçilen aday: Trachemys scripta elegans, Güven: %68.6
+2026-05-04 11:39:30,376 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:39:30,377 - Seçilen aday: Chelonia mydas, Güven: %90.0
+Seçilen aday: Chelonia mydas, Güven: %90.0
+2026-05-04 11:47:58,557 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:47:58,557 - Seçilen aday: Terrapene carolina carolina, Güven: %90.0
+Seçilen aday: Terrapene carolina carolina, Güven: %90.0
+2026-05-04 11:48:59,262 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:48:59,263 - Seçilen aday: Caretta caretta, Güven: %73.0
+Seçilen aday: Caretta caretta, Güven: %73.0
+2026-05-04 11:52:30,350 - 
+## Karar Süreci Başladı
+
+## Karar Süreci Başladı
+2026-05-04 11:52:30,350 - Seçilen aday: Caretta caretta, Güven: %73.0
+Seçilen aday: Caretta caretta, Güven: %73.0
+2026-05-04 11:58:08,784 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,849 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,849 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,849 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,850 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,850 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,853 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,853 - Seçilen aday: Trachemys scripta elegans, Gemini Güveni: %98.0, Nihai Güven: %93.1
+Seçilen aday: Trachemys scripta elegans, Gemini Güveni: %98.0, Nihai Güven: %93.1
+2026-05-04 11:58:08,864 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,864 - Seçilen aday: Chelonia mydas, Gemini Güveni: %90.0, Nihai Güven: %90.5
+Seçilen aday: Chelonia mydas, Gemini Güveni: %90.0, Nihai Güven: %90.5
+2026-05-04 11:58:08,870 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,871 - Seçilen aday: Trachemys scripta elegans, Gemini Güveni: %98.0, Nihai Güven: %93.1
+Seçilen aday: Trachemys scripta elegans, Gemini Güveni: %98.0, Nihai Güven: %93.1
+2026-05-04 11:58:08,874 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:08,874 - Seçilen aday: Chelonia mydas, Gemini Güveni: %90.0, Nihai Güven: %90.5
+Seçilen aday: Chelonia mydas, Gemini Güveni: %90.0, Nihai Güven: %90.5
+2026-05-04 11:58:25,539 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:25,540 - Seçilen aday: Trachemys scripta elegans, Gemini Güveni: %90.0, Nihai Güven: %85.5
+Seçilen aday: Trachemys scripta elegans, Gemini Güveni: %90.0, Nihai Güven: %85.5
+2026-05-04 11:58:25,542 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:25,543 - Seçilen aday: Chelonia mydas, Gemini Güveni: %70.0, Nihai Güven: %66.5
+Seçilen aday: Chelonia mydas, Gemini Güveni: %70.0, Nihai Güven: %66.5
+2026-05-04 11:58:25,545 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 11:58:25,545 - Seçilen aday: Chelonia mydas, Gemini Güveni: %90.0, Nihai Güven: %90.5
+Seçilen aday: Chelonia mydas, Gemini Güveni: %90.0, Nihai Güven: %90.5
+## [2026-05-04 15:30] Karar Sistemi Güncellendi
+**Sistem Mimarisi:** Gemini Tahmin Odaklı
+**Ağırlıklar:** %95 Gemini, %5 Morfolojik Doğrulama
+**Eleme Mantığı:** Bilgilendirme Seviyesine Çekildi (Tür Eleme Artık Yapılmıyor)
+**Yeni Veri Yapısı:** 	op_3_comparison eklendi (İlk 3 türün ideal özellikleri)
+## [2026-05-04 15:30] Karar Sistemi Güncellendi
+**Sistem Mimarisi:** Gemini Tahmin Odaklı
+**Ağırlıklar:** %95 Gemini, %5 Morfolojik Doğrulama
+**Eleme Mantığı:** Bilgilendirme Seviyesine Çekildi (Tür Eleme Artık Yapılmıyor)
+**Yeni Veri Yapısı:** 	op_3_comparison eklendi (İlk 3 türün ideal özellikleri)
+2026-05-04 12:07:55,250 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 12:07:55,250 - Seçilen aday: None, Gemini Güveni: %95.0, Nihai Güven: %95.2
+Seçilen aday: None, Gemini Güveni: %95.0, Nihai Güven: %95.2
+2026-05-04 12:11:02,531 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 12:11:02,532 - Seçilen aday: None, Gemini Güveni: %95.0, Nihai Güven: %95.2
+Seçilen aday: None, Gemini Güveni: %95.0, Nihai Güven: %95.2
+2026-05-04 12:12:51,946 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 12:12:51,946 - Seçilen aday: None, Gemini Güveni: %90.0, Nihai Güven: %90.5
+Seçilen aday: None, Gemini Güveni: %90.0, Nihai Güven: %90.5
+2026-05-04 12:16:18,113 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 12:16:18,113 - Seçilen aday: None, Gemini Güveni: %95.0, Nihai Güven: %95.2
+Seçilen aday: None, Gemini Güveni: %95.0, Nihai Güven: %95.2
+2026-05-04 12:17:00,659 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 12:17:00,659 - Seçilen aday: None, Gemini Güveni: %90.0, Nihai Güven: %90.5
+Seçilen aday: None, Gemini Güveni: %90.0, Nihai Güven: %90.5
+2026-05-04 12:22:06,361 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 12:22:06,362 - Seçilen aday: None, Gemini Güveni: %90.0, Nihai Güven: %90.5
+Seçilen aday: None, Gemini Güveni: %90.0, Nihai Güven: %90.5
+2026-05-04 12:33:08,701 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 12:33:08,702 - Seçilen aday: None, Gemini Güveni: %95.0, Nihai Güven: %95.2
+Seçilen aday: None, Gemini Güveni: %95.0, Nihai Güven: %95.2
+2026-05-04 12:34:03,538 - 
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+
+## Karar Süreci Başladı (Gemini Tahmin Odaklı)
+2026-05-04 12:34:03,539 - Seçilen aday: None, Gemini Güveni: %98.0, Nihai Güven: %98.1
+Seçilen aday: None, Gemini Güveni: %98.0, Nihai Güven: %98.1

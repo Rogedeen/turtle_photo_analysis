@@ -18,6 +18,8 @@ class DecisionResult:
     elimination_steps: List[EliminationStep]
     remaining_candidates: List[str]
     features_used: Dict[str, Any]
+    olasi_turler: List[Dict[str, Any]] = None
+    top_3_comparison: List[Dict[str, Any]] = None  # Karşılaştırma tablosu için eklendi
 
 class IDecisionEngine(ABC):
     @abstractmethod

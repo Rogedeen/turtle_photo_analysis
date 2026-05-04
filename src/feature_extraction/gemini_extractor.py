@@ -23,14 +23,17 @@ class GeminiFeatureExtractor(IFeatureExtractor):
         self.prompt_builder = PromptBuilder()
         self.parser = ResponseParser()
         
-        # API anahtarını çek ve yapılandır
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key or api_key == "your_gemini_api_key_here":
-            raise APIError("Geçerli bir GEMINI_API_KEY bulunamadı. Lütfen key.env veya .env dosyanızı kontrol edin.")
-            
+    def _configure_api(self):
+        """API'yi her taze girişte yapılandırır."""
+        api_key = self.config.api_key
+        if not api_key or api_key == "mock_key":
+             raise APIError("Geçerli bir GEMINI_API_KEY bulunamadı. Lütfen key.env veya .env dosyanızı kontrol edin.")
         genai.configure(api_key=api_key)
 
     async def extract_features(self, image: PreparedImage) -> TurtleFeatures:
+        # Her istekte API anahtarını tazeleyici yapılandırma (Key değişimi için)
+        self._configure_api()
+        
         prompt_text = self.prompt_builder.build_prompt()
         
         try:

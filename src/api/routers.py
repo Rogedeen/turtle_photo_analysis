@@ -36,7 +36,6 @@ async def analyze_turtle(
         prepared_image = preparer.prepare_image(content, file.filename)
     except Exception as e:
         logger.error(f"Image preparation failed: {e}")
-        # InvalidImageError or CompressionError from our domain mapping to 422
         raise HTTPException(status_code=422, detail=f"Image preparation failed: {str(e)}")
         
     try:
@@ -48,9 +47,25 @@ async def analyze_turtle(
     try:
         features_dict = asdict(features)
         result = decision_tree.decide(features_dict)
-    except Exception as e:
-        logger.error(f"Decision tree failed: {e}")
-        raise HTTPException(status_code=500, detail=f"Decision engine failure: {str(e)}")
         
-    # Python dataclass to dict mapping for Pydantic
-    return asdict(result)
+        # Pydantic-compatible conversion
+        response_data = asdict(result)
+        
+        # Temizleme ve Güvenlik: None içermeyen str listeleri sağlamak
+        if response_data.get('remaining_candidates'):
+            response_data['remaining_candidates'] = [
+                str(c) for c in response_data['remaining_candidates'] if c is not None
+            ]
+        else:
+            response_data['remaining_candidates'] = []
+
+        # Ensure lists are at least empty lists
+        if response_data.get('olasi_turler') is None:
+            response_data['olasi_turler'] = []
+        if response_data.get('top_3_comparison') is None:
+            response_data['top_3_comparison'] = []
+            
+        return response_data
+    except Exception as e:
+        logger.exception(f"Decision tree failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Decision engine failure: {str(e)}")

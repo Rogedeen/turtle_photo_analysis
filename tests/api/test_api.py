@@ -21,14 +21,7 @@ mock_prepared_image = PreparedImage(
 )
 
 mock_features = TurtleFeatures(
-    yanak_seridi="evet",
-    gaga_yapisi="düz",
-    kabuk_rengi="yeşil",
-    kabuk_sari_benek="hayır",
-    boyun_deseni="evet",
-    ayak_yapisi="perde",
-    kabuk_kenari="düz",
-    kafa_pul_sayisi="2",
+    olasi_turler=[],
     api_model="gemini-mock",
     raw_response="{}",
     extraction_timestamp="2026-05-03T12:00:00"

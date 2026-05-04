@@ -13,5 +13,10 @@ class DecisionResultSchema(BaseModel):
     confidence: float
     confidence_level: str
     elimination_steps: List[EliminationStepSchema]
-    remaining_candidates: List[str]
+    remaining_candidates: Optional[List[str]] = []
     features_used: Dict[str, Any]
+    olasi_turler: Optional[List[Dict[str, Any]]] = []
+    top_3_comparison: Optional[List[Dict[str, Any]]] = []
+
+class ErrorResponseSchema(BaseModel):
+    detail: str

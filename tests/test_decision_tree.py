@@ -7,47 +7,37 @@ class TestDecisionTree(unittest.TestCase):
         self.rulebook_path = "reports/morphological-rulebook.md"
         self.tree = TurtleDecisionTree(self.rulebook_path)
 
-    def test_initialization(self):
-        """Rulebook'un doğru yüklendiğini kontrol et."""
-        self.assertGreater(len(self.tree.species_rules), 0)
-        self.assertIn("Chelonia mydas", self.tree.species_rules)
-
-    def test_habitat_filter_marine(self):
-        """Deniz kaplumbağası filtresini kontrol et."""
-        features = {"ayak_yapisi": "perde"}
-        result = self.tree.decide(features)
-        
-        # Sadece deniz kaplumbağaları kalmalı
-        deniz_turleri = ["Chelonia mydas", "Caretta caretta", "Eretmochelys imbricata", "Dermochelys coriacea"]
-        for candidate in result.remaining_candidates:
-            self.assertIn(candidate, deniz_turleri)
-
-    def test_habitat_filter_land(self):
-        """Kara kaplumbağası filtresini kontrol et."""
-        features = {"ayak_yapisi": "pençe"}
-        result = self.tree.decide(features)
-        
-        # Deniz kaplumbağaları elenmeli
-        deniz_turleri = ["Chelonia mydas", "Caretta caretta", "Eretmochelys imbricata", "Dermochelys coriacea"]
-        for candidate in result.remaining_candidates:
-            self.assertNotIn(candidate, deniz_turleri)
-
-    def test_elimination_by_feature(self):
-        """Özellik bazlı elemeyi kontrol et (Trachemys)."""
-        # Yanak şeridi yoksa Trachemys elenmeli
-        features = {"yanak_seridi": "hayır"}
-        result = self.tree.decide(features)
-        self.assertNotIn("Trachemys scripta elegans", result.remaining_candidates)
-
-    def test_full_elimination_to_single_species(self):
-        """Tek bir türe kadar eleme sürecini test et."""
+    def test_gemini_guaranteed_candidate(self):
+        """Gemini'ın en yüksek skorlu adayının elenmediğini kontrol et."""
         features = {
-            "ayak_yapisi": "perde",
-            "prefrontal_pul_sayisi": "1",
-            "lateral_skut_sayisi": "4",
-            "kiremit_dizilimi": "hayır"
+            "olasi_turler": [
+                {"tur": "Trachemys scripta elegans", "confidence": 0.98},
+                {"tur": "Chelonia mydas", "confidence": 0.02}
+            ],
+            "ayak_yapisi": "perde", # Çelişki: Trachemys perde ayaklı değildir
+            "yanak_seridi": "hayır"  # Çelişki: Trachemys yanak şeridi taşır
         }
         result = self.tree.decide(features)
+        
+        # Eleme yasak, o yüzden Trachemys seçilmeli
+        self.assertEqual(result.predicted_species, "Trachemys scripta elegans")
+        # Çelişkiler yüzünden güven düşmeli (ama 0 olmamalı)
+        self.assertLess(result.confidence, 0.98)
+        self.assertGreater(result.confidence, 0.0)
+        # Veritabanı özellikleri eklenmiş olmalı
+        self.assertIn("predicted_features", result.features_used)
+
+    def test_ideal_features_return(self):
+        """Veritabanındaki ideal özelliklerin döndüğünü kontrol et."""
+        features = {
+            "olasi_turler": [{"tur": "Chelonia mydas", "confidence": 0.90}]
+        }
+        result = self.tree.decide(features)
+        
+        self.assertEqual(result.predicted_species, "Chelonia mydas")
+        self.assertIn("predicted_features", result.features_used)
+        self.assertEqual(result.features_used["predicted_features"]["kafa_pul_sayisi"], "2")
+
         self.assertEqual(result.predicted_species, "Chelonia mydas")
         self.assertEqual(result.confidence_level, "Orta") # 4/8 özellik
 

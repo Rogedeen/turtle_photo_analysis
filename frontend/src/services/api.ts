@@ -20,16 +20,16 @@ export const analyzeImageApi = async (file: File): Promise<AnalysisResult> => {
   const rawData = await response.json();
 
   // DTO (Data Transfer Object) Mapping:
-  // Gelen veriyi Frontend'in AnalysisResult tipine uyarlıyoruz.
+  // Gelen veriyi Frontend'in AnalysisResult tipine tam olarak uyarlıyoruz.
   const mappedResult: AnalysisResult = {
-    species: rawData.predicted_species || "Tür Belirlenemedi",
-    confidence_score: rawData.confidence || 0,
-    elimination_steps: rawData.elimination_steps?.map((step: any) => ({
-      feature: step.feature_checked,
-      value: step.feature_value, // Artık "evet/hayır" kontrolü yok, doğrudan gelen veriyi alıyoruz
-      reason: step.reason,
-      eliminated: step.eliminated_species || []
-    })) || []
+    predicted_species: rawData.predicted_species,
+    common_name_tr: rawData.common_name_tr,
+    confidence: rawData.confidence || 0,
+    confidence_level: rawData.confidence_level || "Bilinmiyor",
+    elimination_steps: rawData.elimination_steps || [],
+    remaining_candidates: rawData.remaining_candidates || [],
+    features_used: rawData.features_used || {},
+    olasi_turler: rawData.olasi_turler || []
   };
 
   return mappedResult;

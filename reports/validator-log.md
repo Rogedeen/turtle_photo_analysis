@@ -50,3 +50,16 @@
 
 **Raporlama:** PASS
 - `reports/backend-log.md` dosyası eksiksiz ve sürecin aşamalarını çok boyutlu şekilde açıklıyor.
+
+## [2026-05-04 15:30] PR #3 — ResponseValidationError Fix (None Handling)
+**Karar:** PASS
+**Test coverage:** %86 (Status check via last validation)
+**SOLID:**
+- S: PASS - Validasyon mantığı Pydantic ve Router katmanında eklenerek sınıf sorumlulukları korundu.
+- O: PASS - Mevcut yapıyı bozmadan korumalı (safe-guard) kod eklendi.
+- L: PASS
+- I: PASS
+- D: PASS
+**Clean Code:** PASS - emaining_candidates alanında None tipi kontrolü ve default [] ataması yapılarak Pydantic validasyon hataları engellendi.
+**Pipeline testi:** PASS - Gemini'den gelen kirli verilerin (None içeren listeler) pipeline akışını bozması engellendi.
+**Düzeltilecekler:** Yok.

@@ -1,16 +1,21 @@
-from dataclasses import dataclass
-from typing import Optional
+from dataclasses import dataclass, field
+from typing import Optional, List, Dict
+
+@dataclass(frozen=True)
+class TheoreticalFeature:
+    ozellik_adi: str
+    teorik_deger: str
+    gozlemle_uyumlu: bool
+
+@dataclass(frozen=True)
+class SpeciesDetail:
+    tur_adi: str
+    confidence: float
+    teorik_ozellikler: List[TheoreticalFeature]
 
 @dataclass(frozen=True)
 class TurtleFeatures:
-    yanak_seridi: str        # "evet" | "hayır" | "belirsiz"
-    gaga_yapisi: str         # "düz" | "hafif_kıvrık" | "kanca" | "belirsiz"
-    kabuk_rengi: str
-    kabuk_sari_benek: str
-    boyun_deseni: str
-    ayak_yapisi: str         # "perde" | "pençe" | "belirsiz"
-    kabuk_kenari: str        # "düz" | "girintili" | "belirsiz"
-    kafa_pul_sayisi: str     # "2" | "4" | "belirsiz"
+    olasi_turler: List[SpeciesDetail]
     api_model: str           # hangi model kullanıldı
     raw_response: str        # hata ayıklama için ham yanıt
     extraction_timestamp: str

@@ -4,7 +4,7 @@ import LoadingStepper from './components/LoadingStepper';
 import ResultView from './components/ResultView';
 import { useAnalyzeImage } from './hooks/useAnalyzeImage';
 
-function App() {
+export function App() {
   const { state, analyze, reset } = useAnalyzeImage();
 
   return (

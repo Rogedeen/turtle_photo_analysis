@@ -1,6 +1,6 @@
 {
-  "Chelonia mydas": {"common_name": "Yeşil Deniz Kaplumbağası", "habitat": "Deniz", "ayak_yapisi": "perde", "kafa_pul_sayisi": "2", "gaga_yapisi": "düz", "kabuk_kenari": "düz"},
-  "Caretta caretta": {"common_name": "İribaş Deniz Kaplumbağası", "habitat": "Deniz", "ayak_yapisi": "perde", "kafa_pul_sayisi": "4", "gaga_yapisi": "kanca"},
+  "Chelonia mydas": {"common_name": "Yeşil Deniz Kaplumbağası", "common_name_tr": "Yeşil Deniz Kaplumbağası", "habitat": "Deniz", "ayak_yapisi": "perde", "kafa_pul_sayisi": "2", "gaga_yapisi": "düz", "kabuk_kenari": "düz"},
+  "Caretta caretta": {"common_name": "İribaş Deniz Kaplumbağası", "common_name_tr": "İribaş Deniz Kaplumbağası", "habitat": "Deniz", "ayak_yapisi": "perde", "kafa_pul_sayisi": "4", "gaga_yapisi": "kanca"},
   "Eretmochelys imbricata": {"common_name": "Şahin Gagalı Deniz Kaplumbağası", "habitat": "Deniz", "ayak_yapisi": "perde", "gaga_yapisi": "kanca", "kabuk_kenari": "girintili"},
   "Dermochelys coriacea": {"common_name": "Deri Sırtlı Deniz Kaplumbağası", "habitat": "Deniz", "ayak_yapisi": "perde", "kabuk_rengi": "siyah"},
   "Trachemys scripta elegans": {"common_name": "Kızıl Yanaklı Su Kaplumbağası", "habitat": "Tatlı Su", "ayak_yapisi": "pençe", "yanak_seridi": "evet", "boyun_deseni": "evet"},
